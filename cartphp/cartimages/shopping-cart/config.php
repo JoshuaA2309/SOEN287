@@ -5,6 +5,4 @@
 	}
 
 // $conn = simplexml_load_file("cart_system.xml") or die("Failed to load");
- 
-
-?> 
+?>
