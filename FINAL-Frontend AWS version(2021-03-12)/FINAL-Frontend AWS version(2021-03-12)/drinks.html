@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drinks</title>
+    <link rel="stylesheet" href="products.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" id="navbar__logo"
+        ><i class="fas fa-shopping-basket"></i>SUPER GROCERIES</a
+      >
+      <!--JS part-->
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">Home</a>
+        </li>
+        
+        </li>
+        <li class="navbar__item">
+          <a href="aisles.html" class="navbar__links">Products</a>
+        </li>
+        <li class="navbar__item">
+          <a href="signin.html" class="navbar__links">Sign in</a>
+        </li>
+        <li class="navbar__item">
+          <a href="cart.html" class="navbar__links">
+          Cart <i class=" fas fa-shopping-basket"></i></a>
+          
+
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>DRINKS SECTION</h1>
+        <p>From cocktails to fruit punch</p>
+
+      </div>
+      
+      <button class="sale_button"
+data-modal-target="#modal">Today's Special</button>
+<div class="modal" id="modal">
+  <button data-close-button class="close-button">&times;</button>
+  <div class="modal-header">
+    <div class="title">Sale: pomegranite juice</div>
+   
+  
+  <div class="modal-body">
+Pomegranite juice is delicious and so good for you! It has a huge number of vitamins and minerals. A perfect start to your day.
+  </div>
+</div>
+<div id="overlay"></div>
+
+   
+      <div class="main__img-container">
+        <img id="main__img" src="images/drinks1.jpg" style="width: 100%;" />
+      </div>
+       </div>
+    </div>
+
+ 
+
+      <div class="section__store__products"> 
+        <h2>Lemonade (7.95/L)</h2>
+        <img src="images/lemonade.jpg"style="width:50%;"/>
+        <button class="main__btn"><a href="lemonade.html">More details</a></button>
+        <button class="main__btn">Add to cart</button>
+        <br>
+        <br>
+        <h2>Orange juice(7.99/L)</h2>
+        <img src="images/orange juice.jpg"style="width:50%;"/>
+        <button class="main__btn"><a href="orange Juice.html">More details</a></button>
+        <button class="main__btn">Add to cart</button>
+        <br>
+        <br>
+        <h2>Watermelon juice(5.99/L)</h2>
+        <img src="images/watermelon juice.jpg"style="width:50%;"/>
+        <button class="main__btn"><a href="watermerlon juice.html">More details</a></button>
+        <button class="main__btn">Add to cart</button>
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+      <script src="special.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegetables</title>
+    <link rel="stylesheet" href="products.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"
+          ><i class="fas fa-shopping-basket"></i>SUPER GROCERIES</a
+        >
+        <!--JS part-->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          
+          </li>
+          <li class="navbar__item">
+            <a href="aisles.html" class="navbar__links">Products</a>
+          </li>
+          <li class="navbar__item">
+            <a href="signin.html" class="navbar__links">Sign in</a>
+          </li>
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__links">
+            Cart <i class=" fas fa-shopping-basket"></i></a>
+            
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>VEGETABLES SECTION</h1>
+          <p>We offer a huge selection of fresh vegetables delivered right to your doorsetp</p>
+        </div>
+
+        <button class="sale_button"
+data-modal-target="#modal">Today's Special</button>
+  <div class="modal" id="modal">
+    <button data-close-button class="close-button">&times;</button>
+    <div class="modal-header">
+      <div class="title">Special Sale Capsicum:40%</div>
+     
+    
+    <div class="modal-body">
+  Being rich in antioxidant and anti-inflammatory nutrients, capsicums provide several anti-cancer benefits. They also contain health supportive sulphur compounds. The enzymes present in capsicum help to prevent gastric cancer and esophageal cancer.
+
+    </div>
+  </div>
+  <div id="overlay"></div>
+
+        <div class="main__img-container">
+          <img id="main__img" src="images/Vegetable.jpg" 
+          style = "height: 80%; width:80%"/> 
+        </div>
+      </div>
+
+    </div>
+    <div class="section__store__products"> 
+      <h2>Potatoes (12.99/lbs)</h2>
+      <img src="images/potatoe.jpg" style="width: 50%;"/>
+      <button class="main__btn"><a href="potatoes.html">More details</a></button>
+      <button class="main__btn">Add to cart</button>
+      <br>
+      <br>
+      <h2>Tomatoes (2.99/lbs)</h2>
+      <img src="images/tomatoes.jpg"style="width: 50%;"/>
+      <button class="main__btn"><a href="Tomatoes.html">More details</a></button>
+      <button class="main__btn"> <a href="/shopping-cart/products.php"></a> Add to cart</button>
+      <br>
+      <br>
+      <h2>Cucumbers (16.99/lbs)</h2>
+      <img src="images/cucmbers.jpg"style="width: 50%;"/>
+      <button class="main__btn"><a href="Cucumbers.html">More details</a></button>
+        <button class="main__btn">Add to cart</button>
+    </div>
+
+
+    </div>
+    <script src="app.js"></script>
+    <script src="vegetables.js"></script>
+    <script src="special.js"></script>
+  </body>
+</html>

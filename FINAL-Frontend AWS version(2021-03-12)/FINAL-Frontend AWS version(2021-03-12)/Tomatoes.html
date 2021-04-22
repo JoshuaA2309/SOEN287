@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tomatoes</title>
+    <link rel="stylesheet" href="styles3.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+ <!-- Navbar Section -->
+ <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" id="navbar__logo"
+      ><i class="fas fa-shopping-basket"></i>SUPER GROCERIES</a
+    >
+    <!--JS part-->
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span> <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="index.html" class="navbar__links">Home</a>
+      </li>
+      
+      </li>
+      <li class="navbar__item">
+        <a href="aisles.html" class="navbar__links">Products</a>
+      </li>
+      <li class="navbar__item">
+        <a href="signin.html" class="navbar__links">Sign in</a>
+      </li>
+      <li class="navbar__item">
+        <a href="cart.html" class="navbar__links">
+        Cart <i class=" fas fa-shopping-basket"></i></a>
+        
+
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+    <div class="product_container">
+        <div class="image_container">
+             <img src="images/tomatoes.jpg" alt="Tomato" class="product_image">
+        </div>
+        <div class="product_description">
+            <h1>Tomatoes</h1>
+            <details>
+              <summary>Detailed description</summary>
+              <p>These tomatoes are a sweeter variety, and are grown organically.</p>
+            </details>
+            <div class="buying">
+            <h3>Price: $2.99/1lb</h3>
+            <div class="buy_item">
+              <form>
+                  <input type="number" placeholder="Quantity" name="quantity" min="0" onchange="calculateAmount(this.value)" required>
+                  <input type="submit">
+              </form>
+              <script>
+                function calculateAmount(val) {
+                    var total_price = val * 2.99;
+                    var calc = document.getElementById('total_price');
+                    calc.value = '$' + total_price.toFixed(2);
+                }
+            </script>
+            <h3>Total:</h3>
+            <input  name="total_price" id="total_price" type="text" readonly>
+
+          </div>
+            </div>
+        </div>
+        
+    </div>

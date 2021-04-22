@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cart.css" />
+     
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"
+          ><i class="fas fa-shopping-basket"></i>SUPER GROCERIES</a
+        >
+        <!--JS part-->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links">Home</a>
+          </li>
+          
+          </li>
+          <li class="navbar__item">
+            <a href="aisles.html" class="navbar__links">Products</a>
+          </li>
+          <li class="navbar__item">
+            <a href="signin.html" class="navbar__links">Sign in</a>
+          </li>
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__links">
+            Cart <i class=" fas fa-shopping-basket"></i>
+          </li>
+           <li class="navbar__item">
+           <a><br><a href =" "></a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+    
+<!----------------cart item details----------------->
+  <table id="table" >
+    <!--Cart Items -->  
+ </table>
+
+
+<div id="cart-total">
+
+</div>
+
+
+<script>
+
+ const itemList= document.getElementById('table')
+ const cartQty = document.getElementById('cart-qty')
+ const cartTotal= document.getElementById('cart-total')
+
+ const cart = [ ]
+
+
+//-------------------
+//handling clicks
+ itemList.onclick = function(e)  {
+     console.log("we have clicked!!")
+     console.log(e.target)
+     if(e.target && e.target.classList.contains('Remove')){
+         const name = e.target.dataset.name
+         removeItem(name)
+     }
+      else if(e.target && e.target.classList.contains('add-one')){
+         const name = e.target.dataset.name
+         addItem(name)
+     }
+     if(e.target && e.target.classList.contains('remove-one')){
+         const name = e.target.dataset.name
+         removeItem(name)
+     }
+  
+
+ }
+//handle change events on update
+itemList.onchange=function(e){
+if(e.target.classList.contains('update')){
+
+ const name= e.target.dataset.name
+ const qty= parseInt(e.target.value)
+ updateCart(name,qty)
+
+ 
+}
+}
+//ading items to the cart
+ function addItem(name, price){
+   
+     for(let i=0; i< cart.length; i +=1){
+         if(cart[i].name=== name) {
+             cart[i].qty += 1
+             showItems()
+             return
+         }
+     }
+     const item = {name:name,price:price, qty:1}
+     cart.push(item)
+ }
+
+// removing item from cart
+ function removeItem(name){
+     for(let i=0; i< cart.length; i +=1){
+         if(cart[i].name === name){
+             if(cart[i].qty > 1){
+                 cart[i].qty -=1
+             }
+             else{                    
+                 cart.splice(i,1)
+
+             }
+         }
+     showItems()
+     }
+ }
+
+
+//showing items on the cart
+ function showItems(){
+ 
+     let itemStr=''
+     let totalStr=''
+
+      for(let i=0; i< cart.length; i+=1){
+        const { name,price, qty}=cart[i]
+        subt=price*qty
+        subt=subt.toFixed(2)
+        if(i===0){
+          itemStr+=`<tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          </tr>`
+        }
+        
+        itemStr +=`
+        <tr>
+         <td>
+         <div class = "cart-info">
+         <img src ="images/${name}.jpg">
+         <div>
+         <p>  ${name} </p>
+         <small> Price:  ${price} </small>
+         <br>
+         <!--<button class="Remove" data-name="${name}">Remove</button>-->
+        
+         </div>
+         </div>
+         </td>
+         <td> <p> ${qty}
+              <button class="add-one" data-name="${name}"> + </button>
+              <button class="Remove" data-name="${name}"> - </button></td>
+         <td>$${subt}</td>
+         </td>
+         `
+     }
+     totalStr=`<div class="total-price">
+      <table>
+<tr>
+<td>Subtotal</td>
+<td>${getTotal()}</td>
+</tr>
+<tr>
+<td>GST(9.975%)</td>
+<td>${getGST()}</td>
+<td>QST(5%)</td>
+<td>${getQST()}</td>
+</tr>
+<tr> 
+<td>Total</td>
+<td>${getFinal()}</td>
+<tr>
+<td><button>Checkout</button></td>
+</tr>
+</tr> 
+<tr>
+  
+</tr>
+</table>
+</div>`
+  itemList.innerHTML= itemStr
+  cartTotal.innerHTML= totalStr
+ }
+
+
+
+//qty function for whole cart
+function getQty(){
+     let qty = 0
+     for(let i=0; i< cart.length; i+=1){
+     qty += cart[i].qty
+     }
+     return qty
+ }
+//sub total funciton
+ function subTotal(name){
+     let subtotal=0
+     for(let i=0; i< cart.length; i+=1){
+        if(cart[i].name === name)
+         subtotal = cart[i].price * cart[i].qty
+     }
+     return subTotal.toFixed(2)
+ }
+//total function
+
+ function getPrice(){
+   let totprice = 0
+
+   totprice = price * qty
+
+   return totprice.toFixed(2)
+ }
+
+ function getTotal(){
+     let total = 0
+
+     for(let i=0; i< cart.length; i+=1){
+         total+= cart[i].price * cart[i].qty
+     }
+     return total.toFixed(2)
+ }
+
+ function getGST(){
+
+   let gst = 0
+
+   gst= getTotal()*0.09975
+
+   return gst.toFixed(2)
+ }
+
+ function getQST(){
+
+  let qst = 0
+
+  qst = getTotal()*0.05
+
+  return qst.toFixed(2)
+
+ }
+
+ function getFinal(){
+
+   let final = 0
+
+   final = getTotal()*1.14875
+   final=final.toFixed(2)
+   return final
+ }
+
+//update cart 
+ function updateCart(name, qty){
+     for(let i=0; i< cart.length; i+=1){
+        if (cart[i].name === name)
+        cart[i].qty = qty 
+        showItems()
+        return
+     }   
+ }
+ addItem('tomatoes',0.99)
+ addItem('veal',1.29)
+ addItem('veal',1.29)
+ addItem('steak',3.99)
+
+ showItems()
+</script>
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="cart.js"></script>
+
+</body>
+
+</html>>

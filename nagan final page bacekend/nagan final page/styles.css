@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+  }
+
+  @media only screen and (min-width: 1200px){
+  .image {
+  margin-left: 200px;
+}
+ .image img{
+   display: flex;
+   margin-right: auto;
+   
+   z-index: -1;
+ }
+ .image button{
+  font-size: 24px;
+  text-align:center;
+  vertical-align: middle;
+  display:flex;
+  background-color:rgb(5, 4, 4);
+  color:#2C3E50;
+  border-radius: 0;
+  font-weight:lighter;
+  }
+ .image button:hover{
+  background-color: rgba(58, 1, 1, 0.233);
+ }
+ #deletebtn{
+  font-size: 24px;
+  text-align:center;
+  vertical-align: middle;
+  display:flex;
+  background-color:aliceblue;
+  color:#313131;
+  border-radius: 0;
+  font-weight:lighter;
+ }
+
+ #deletebtn:hover{
+  background-color: rgba(114, 112, 112, 0.918);
+
+ }
+ .image input{
+   width:300px;
+   padding: 12px 20px;
+   padding-left: 5%;
+   margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing:border-box;
+  background-color: aliceblue;
+  color: #313131;
+}
+  }
+  @media only screen and (min-width:  768px){
+    .image {
+      margin-left:25%;
+    }
+     .image img{
+       display: flex;
+       margin-right: auto;
+       max-width: 250px;
+       max-height: 250px;
+       z-index: -1;
+     }
+     .image button{
+      font-size: 24px;
+      text-align:center;
+      vertical-align: middle;
+      display:flex;
+      background-color:rgb(5, 4, 4);
+      color:#2C3E50;
+      border-radius: 0;
+      font-weight:lighter;
+      }
+     .image button:hover{
+      background-color: rgba(58, 1, 1, 0.233);
+     }
+     #deletebtn{
+      font-size: 24px;
+      text-align:center;
+      vertical-align: middle;
+      display:flex;
+      background-color:aliceblue;
+      color:#313131;
+      border-radius: 0;
+      font-weight:lighter;
+     }
+    
+     #deletebtn:hover{
+      background-color: rgba(114, 112, 112, 0.918);
+    
+     }
+     .image input{
+       width:300px;
+       padding: 12px 20px;
+       padding-left: 5%;
+       margin: 8px 0;
+      display: inline-block;
+      border: 1px solid;
+      border-radius: 4px;
+      box-sizing:border-box;
+      background-color: aliceblue;
+      color: #313131;
+    }
+
+  }
+  @media only screen and (max-width: 767px) {
+    .image {
+      margin-left:5%;
+    }
+     .image img{
+       display: flex;
+       margin-right: auto;
+       max-width: 250px;
+       max-height: 250px;
+       z-index: -1;
+     }
+     .image button{
+      font-size: 24px;
+      text-align:center;
+      vertical-align: middle;
+      display:flex;
+      background-color:rgb(5, 4, 4);
+      color:#2C3E50;
+      border-radius: 0;
+      font-weight:lighter;
+      }
+     .image button:hover{
+      background-color: rgba(58, 1, 1, 0.233);
+     }
+     #deletebtn{
+      font-size: 24px;
+      text-align:center;
+      vertical-align: middle;
+      display:flex;
+      background-color:aliceblue;
+      color:#313131;
+      border-radius: 0;
+      font-weight:lighter;
+     }
+    
+     #deletebtn:hover{
+      background-color: rgba(114, 112, 112, 0.918);
+    
+     }
+     .image input{
+       width:300px;
+       padding: 12px 20px;
+       padding-left: 5%;
+       margin: 8px 0;
+      display: inline-block;
+      border: 1px solid;
+      border-radius: 4px;
+      box-sizing:border-box;
+      background-color: aliceblue;
+      color: #313131;
+    }
+
+  }
+  

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.0
+- https://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Apr 21, 2021 at 10:22 PM
+- Server version: 10.4.18-MariaDB
+- PHP Version: 8.0.3
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="cart_system" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cart">
+                CREATE TABLE `cart` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `product_name` varchar(100) NOT NULL,
+                  `product_price` varchar(50) NOT NULL,
+                  `product_image` varchar(255) NOT NULL,
+                  `qty` int(10) NOT NULL,
+                  `total_price` varchar(100) NOT NULL,
+                  `product_code` varchar(10) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="orders">
+                CREATE TABLE `orders` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(100) NOT NULL,
+                  `email` varchar(100) NOT NULL,
+                  `phone` varchar(20) NOT NULL,
+                  `address` varchar(255) NOT NULL,
+                  `pmode` varchar(50) NOT NULL,
+                  `products` varchar(255) NOT NULL,
+                  `amount_paid` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="product">
+                CREATE TABLE `product` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `product_name` varchar(100) NOT NULL,
+                  `product_price` varchar(50) NOT NULL,
+                  `product_image` varchar(255) NOT NULL,
+                  `product_code` varchar(10) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'cart_system'
+    -->
+    <database name="cart_system">
+        <!-- Table cart -->
+        <!-- Table orders -->
+        <!-- Table product -->
+        <table name="product">
+            <column name="id">1</column>
+            <column name="product_name">Tomatoes</column>
+            <column name="product_price">5</column>
+            <column name="product_image">image/tomato.jpg</column>
+            <column name="product_code">t1</column>
+        </table>
+        <table name="product">
+            <column name="id">2</column>
+            <column name="product_name">Meat</column>
+            <column name="product_price">13</column>
+            <column name="product_image">image/Meat.jpg</column>
+            <column name="product_code">m1</column>
+        </table>
+        <table name="product">
+            <column name="id">3</column>
+            <column name="product_name">Milk</column>
+            <column name="product_price">6</column>
+            <column name="product_image">image/milk.jpg</column>
+            <column name="product_code">mi1</column>
+        </table>
+        <table name="product">
+            <column name="id">4</column>
+            <column name="product_name">Chips</column>
+            <column name="product_price">4</column>
+            <column name="product_image">image/chips.jpg</column>
+            <column name="product_code">c1</column>
+        </table>
+        <table name="product">
+            <column name="id">5</column>
+            <column name="product_name">Ice cream</column>
+            <column name="product_price">7</column>
+            <column name="product_image">image/icecream.jpg</column>
+            <column name="product_code">i1</column>
+        </table>
+        <table name="product">
+            <column name="id">6</column>
+            <column name="product_name">Muffin</column>
+            <column name="product_price">5</column>
+            <column name="product_image">image/muffin.jpg</column>
+            <column name="product_code">mu1</column>
+        </table>
+        <table name="product">
+            <column name="id">7</column>
+            <column name="product_name">Watermelon Juice</column>
+            <column name="product_price">2</column>
+            <column name="product_image">image/watermelon.jpg</column>
+            <column name="product_code">w1</column>
+        </table>
+        <table name="product">
+            <column name="id">7</column>
+            <column name="product_name">Orange</column>
+            <column name="product_price">2</column>
+            <column name="product_image">image/orange.jpg</column>
+            <column name="product_code">o1</column>
+        </table>
+    </database>
+</pma_xml_export>
