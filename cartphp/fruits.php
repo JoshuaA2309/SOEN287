@@ -4,7 +4,7 @@
         <title>Fruits</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="storestyles.css" />
-        <script src="../FINAL-Frontend AWS version(2021-03-12)/FINAL-Frontend AWS version(2021-03-12)/store.js" async></script>
+        <script src="store.js" async></script>
     </head>
     <body>
      <nav class="navbar">
@@ -71,6 +71,12 @@
                echo'<script type="text/javascript">
                window.location = "fruits.php";
                </script>';
+               
+
+              // $xml=simplexml_load_file("cart.xml") or die ("cannot add product");
+              // print_r($xml);
+
+
                }
             }
           }

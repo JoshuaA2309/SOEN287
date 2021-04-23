@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Dairy</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="storestyles.css" />
-        <script src="../FINAL-Frontend AWS version(2021-03-12)/FINAL-Frontend AWS version(2021-03-12)/store.js" async></script>
+        <script src="store.js" async></script>
     </head>
     <body>
      <nav class="navbar">
@@ -45,6 +46,8 @@
             <h2 class="section-header">DAIRY</h2>
             <div class="shop-items">
     <?php
+    
+
       $xml=simplexml_load_file('products.xml');
             $xml1=new DomDocument("1.0","UTF-8");
             $xml1->load("cart.xml");

@@ -4,7 +4,7 @@
         <title>Drinks</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="storestyles.css" />
-        <script src="../FINAL-Frontend AWS version(2021-03-12)/FINAL-Frontend AWS version(2021-03-12)/store.js" async></script>
+        <script src="store.js" async></script>
     </head>
     <body>
      <nav class="navbar">
@@ -69,7 +69,7 @@
 
             //    should add cart file
                echo'<script type="text/javascript">
-               window.location = "drinks.php";
+               window.location = "#";
                </script>';
                }
             }
@@ -103,7 +103,7 @@
 ?>
 
         
-                <!-- <div class="shop-item">
+                 <!-- <div class="shop-item">
                     <span class="shop-item-title">Tomatoes</span>
                     <img class="shop-item-image" src="../cartphp/cartimages/Tomatoes.jpg">
                     <div class="shop-item-details">
@@ -127,7 +127,7 @@
                         <span class="shop-item-price">$9.99</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
-                </div>  -->
+                </div>   -->
                
             </div>
 
